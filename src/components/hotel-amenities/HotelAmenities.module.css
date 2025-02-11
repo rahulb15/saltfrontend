@@ -1,0 +1,236 @@
+.amenitiesContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Enhanced header styling */
+.amenitiesHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.amenitiesTitle {
+  font-size: 28px;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.amenitiesDescription {
+  color: #6B7280;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* Improved grid layout */
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Enhanced card styling */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid #E5E7EB;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  background: linear-gradient(45deg, #059669, #065f46);
+  padding: 20px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardHeader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
+  pointer-events: none;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.cardContent {
+  padding: 24px;
+}
+
+/* Improved amenity list styling */
+.amenityList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.amenityItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #F9FAFB;
+  transition: all 0.2s ease;
+}
+
+.amenityItem:hover {
+  background: #F0FDF4;
+  transform: translateX(4px);
+}
+
+.amenityIcon {
+  width: 24px;
+  height: 24px;
+  color: #059669;
+  flex-shrink: 0;
+}
+
+.amenityName {
+  font-size: 15px;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Enhanced about section */
+.aboutSection {
+  background: linear-gradient(to right, #F0FDF4, #ECFDF5);
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #059669, #065f46);
+}
+
+.aboutTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #059669;
+  margin-bottom: 16px;
+}
+
+.aboutText {
+  font-size: 16px;
+  color: #4B5563;
+  line-height: 1.7;
+  max-width: 800px;
+}
+
+/* Loading and error states */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background: #F9FAFB;
+  border-radius: 12px;
+}
+
+.loadingSpinner {
+  animation: spin 1s linear infinite;
+  color: #059669;
+  width: 40px;
+  height: 40px;
+}
+
+.errorMessage {
+  text-align: center;
+  color: #DC2626;
+  background: #FEF2F2;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #FCA5A5;
+  font-weight: 500;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Category indicator pills */
+.categoryPill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.categoryPill.BASIC {
+  background: #E0F2FE;
+  color: #0369A1;
+}
+
+.categoryPill.PREMIUM {
+  background: #F0FDF4;
+  color: #059669;
+}
+
+.categoryPill.LUXURY {
+  background: #FDF4FF;
+  color: #C026D3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .amenitiesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .amenityList {
+    grid-template-columns: 1fr;
+  }
+  
+  .cardHeader {
+    padding: 16px 20px;
+  }
+  
+  .cardTitle {
+    font-size: 18px;
+  }
+  
+  .aboutSection {
+    padding: 24px;
+  }
+}

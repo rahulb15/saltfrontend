@@ -1,0 +1,148 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px;
+  }
+  
+  .stateContainer {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #F9FAFB, #F3F4F6);
+    border-radius: 12px;
+    padding: 32px;
+  }
+  
+  .loadingContainer {
+    text-align: center;
+  }
+  
+  .spinner {
+    width: 48px;
+    height: 48px;
+    color: #059669;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+  }
+  
+  .loadingTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1F2937;
+    margin-bottom: 8px;
+  }
+  
+  .loadingText {
+    color: #6B7280;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .messageCard {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .messageImage {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 24px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .messageTitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 16px;
+  }
+  
+  .errorTitle {
+    color: #DC2626;
+  }
+  
+  .messageText {
+    color: #6B7280;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-size: 16px;
+  }
+  
+  .primaryButton {
+    background-color: #059669;
+    color: white;
+  }
+  
+  .primaryButton:hover {
+    background-color: #047857;
+  }
+  
+  .secondaryButton {
+    background-color: white;
+    color: #059669;
+    border: 2px solid #059669;
+  }
+  
+  .secondaryButton:hover {
+    background-color: #F0FDF4;
+  }
+  
+  .buttonIcon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .buttonContainer {
+      flex-direction: column;
+    }
+  
+    .button {
+      width: 100%;
+    }
+  
+    .messageCard {
+      padding: 24px;
+    }
+  
+    .messageTitle {
+      font-size: 24px;
+    }
+  }

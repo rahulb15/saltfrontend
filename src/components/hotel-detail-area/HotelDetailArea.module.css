@@ -1,0 +1,65 @@
+.bdBannerArea {
+  position: relative;
+  margin-bottom: 120px;
+  min-height: 500px;
+  z-index: 2; /* Ensure banner area is above footer */
+}
+
+.filter {
+  position: sticky;
+  top: 90%;
+  margin-top: -70px;
+  left: 5%;
+  width: 90%;
+  z-index: 3; /* Filter should be above banner and footer */
+  background-color: #a5daa3;
+  padding: 3px;
+  border-radius: 20px;
+  box-shadow: 0 20px 36px rgba(28, 112, 42, 0.15);
+}
+
+.hotelDetailWrapper {
+  position: relative;
+  padding-bottom: 150px; /* Increased padding to ensure more space */
+  background-color: #fff; /* Add background color */
+  z-index: 2; /* Keep wrapper above footer */
+}
+
+/* Main content wrapper styles */
+.mainContentWrapper {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+/* Footer styles override */
+.bd-footer-area {
+  position: relative !important; /* Override any absolute positioning */
+  z-index: 1 !important; /* Keep footer below main content */
+  margin-top: -100px; /* Adjust if needed */
+}
+
+/* Container styles */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Add these to your HotelDetail.module.css */
+.hotelDetail {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  margin-bottom: 100px; /* Add space before footer */
+  border-radius: 20px 20px 0 0;
+  overflow: visible; /* Change from hidden to visible */
+}
+
+.hotelContent {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 50px;
+}

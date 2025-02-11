@@ -1,0 +1,355 @@
+/* .hotelDetail {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .hotelHeader {
+    background-color: #FFB700;
+    background-image: linear-gradient(135deg, #FFB700 0%, #FF8C00 50%, #FFB700 100%);
+    padding: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .hotelInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 70%;
+  }
+  
+  .hotelMainInfo {
+    margin-bottom: 20px;
+  }
+  
+  .hotelName {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hotelLocation {
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .hotelDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .detailItem {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  .hotelBooking {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    flex-shrink: 0;
+    max-width: 30%;
+  }
+  
+  .hotelPriceWrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .hotelPrice {
+    color: #FFFFFF;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+  }
+  
+  .perNight {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+  }
+  
+  .taxes {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-top: 5px;
+  }
+  
+  .datePickerWrapper {
+    background-color: #FFFFFF;
+    padding: 14px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .calendarIcon {
+    color: #277436;
+    margin-right: 12px;
+  }
+  
+  .datePicker {
+    font-size: 18px;
+    color: #333333;
+    border: none;
+    outline: none;
+    width: 260px;
+  }
+  
+  .hotelTabs {
+    display: flex;
+    overflow-x: auto;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  
+  .tab {
+    padding: 18px 22px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #555555;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .tab:hover {
+    color: #277436;
+  }
+  
+  .tab.active {
+    color: #277436;
+  }
+  
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #277436;
+  }
+   */
+
+   .hotelDetail {
+    max-width: 2200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    /* border-radius: 20px 20px 0 0; */
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 2px;
+  }
+  
+  .hotelHeader {
+    background-color: #FFB700;
+    background-image: linear-gradient(135deg, #FFB700 0%, #FF8C00 50%, #FFB700 100%);
+    padding: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .hotelInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 70%;
+  }
+  
+  .hotelMainInfo {
+    margin-bottom: 20px;
+  }
+  
+  .hotelName {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 6px rgba(255, 254, 254, 0.3);
+    color: #57450d;
+    transition: color 0.3s ease;
+  }
+  
+  .hotelLocation {
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+    font-size: 18px;
+    margin-bottom: 15px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hotelDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .detailItem {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .hotelBooking {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    flex-shrink: 0;
+    max-width: 30%;
+  }
+  
+  .hotelPriceWrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .hotelPrice {
+    color: #FFFFFF;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .perNight {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+  }
+  
+  .taxes {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-top: 5px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .datePickerWrapper {
+    background-color: #FFFFFF;
+    padding: 14px 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .calendarIcon {
+    color: #277436;
+    margin-right: 12px;
+  }
+  
+  
+  .hotelTabs {
+    display: flex;
+    overflow-x: auto;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  
+  .tab {
+    padding: 18px 22px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #555555;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tab:hover {
+    color: #277436;
+  }
+  
+  .tab.active {
+    color: #277436;
+  }
+  
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #277436;
+  }
+  
+  /* Hover Effects */
+  
+  .hotelName:hover {
+    color: #4e4a0b;
+  }
+  
+  .hotelLocation:hover {
+    opacity: 1;
+  }
+  
+  .detailItem:hover .icon {
+    transform: scale(1.1);
+  }
+  
+  .hotelPriceWrapper:hover .hotelPrice,
+  .hotelPriceWrapper:hover .perNight {
+    color: #FF8C00;
+  }
+  
+  .datePickerWrapper:hover {
+    box-shadow: 0 10px 20px #42ac57;
+  }
+  
+  

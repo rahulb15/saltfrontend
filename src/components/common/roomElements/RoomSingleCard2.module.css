@@ -1,0 +1,695 @@
+/* .carouselArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carouselArrow:hover {
+  background-color: #ffb700;
+}
+
+.carouselArrowPrev {
+  left: 10px;
+}
+
+.carouselArrowNext {
+  right: 10px;
+}
+
+.carouselContainer {
+  position: relative;
+}
+
+
+.discountBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 10;
+  }
+  
+  .roomDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .detailItem {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .priceSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .actualPrice {
+    font-weight: bold;
+    color: #28a745;
+  } */
+/* 
+
+  .roomCard {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .roomCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  .roomCardInner {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .imageContainer {
+    position: relative;
+    height: 200px;
+  }
+  
+  .carouselImageWrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .carouselArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carouselArrow:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .carouselArrowPrev {
+    left: 10px;
+  }
+  
+  .carouselArrowNext {
+    right: 10px;
+  }
+  
+  .discountBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    z-index: 10;
+  }
+  
+  .contentContainer {
+    padding: 16px;
+  }
+  
+  .roomTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .roomDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  
+  .detailItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .amenity {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  .priceSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .priceLabel {
+    font-size: 0.9rem;
+    color: #28a745;
+    font-weight: 500;
+  }
+  
+  .actualPrice {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .perNight {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: normal;
+  }
+  
+  .bookNowButton {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bookNowButton:hover {
+    background-color: #0056b3;
+  } */
+
+/* 
+  .roomCard {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .roomCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .roomCardInner {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .imageContainer {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+  }
+  
+  .carouselImageWrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+  }
+  
+  .carouselArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+  
+  .carouselArrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .carouselArrowPrev {
+    left: 15px;
+  }
+  
+  .carouselArrowNext {
+    right: 15px;
+  }
+  
+  .discountBadge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contentContainer {
+    padding: 20px;
+  }
+  
+  .roomTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .roomDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .detailItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    color: #555;
+    background-color: #f5f5f5;
+    padding: 6px 12px;
+    border-radius: 20px;
+  }
+  
+  .amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .amenity {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #e9f5ff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #0077be;
+  }
+  
+  .priceSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 15px;
+  }
+  
+  .priceLabel {
+    font-size: 0.95rem;
+    color: #28a745;
+    font-weight: 600;
+  }
+  
+  .actualPrice {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .perNight {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: normal;
+  }
+  
+  .bookNowButton {
+    width: 100%;
+    background-color: #0077be;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 119, 190, 0.2);
+  }
+  
+  .bookNowButton:hover {
+    background-color: #005fa3;
+    box-shadow: 0 6px 8px rgba(0, 119, 190, 0.3);
+    transform: translateY(-2px);
+  } */
+
+  .roomCard {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .roomCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .roomCardInner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .imageContainer {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+  }
+  
+  .carouselImageWrapper {
+    position: relative;
+    width: 100%;
+    height: 220px;
+  }
+  
+  .carouselArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+  
+  .carouselArrow:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .carouselArrowPrev {
+    left: 15px;
+  }
+  
+  .carouselArrowNext {
+    right: 15px;
+  }
+  
+  .discountBadge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contentContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .roomTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .roomDetails {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .detailItem {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    color: #555;
+    background-color: #f5f5f5;
+    padding: 6px 12px;
+    border-radius: 20px;
+  }
+  
+  .amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .amenity {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #e9f5ff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #0077be;
+  }
+  
+  .priceSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    padding: 10px 15px;
+    border-radius: 15px;
+  }
+  
+  .priceLabel {
+    font-size: 0.95rem;
+    color: #28a745;
+    font-weight: 600;
+  }
+  
+  .actualPrice {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .perNight {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: normal;
+  }
+  
+  .quantitySection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .quantityButton {
+    background-color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #333;
+  }
+  
+  .quantityButton:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .quantityButton:active {
+    background-color: #e0e0e0;
+  }
+  
+  .quantityDisplay {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0 15px;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .bookNowButton {
+    width: 100%;
+    background: linear-gradient(to right, #00be75, #028d4c, #00be75);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 119, 190, 0.2);
+    margin-top: auto;
+  }
+  
+  .bookNowButton:hover {
+    background: linear-gradient(to right, #00a31b, #10be00);
+    box-shadow: 0 6px 8px rgba(0, 190, 158, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .bookNowButtonDisabled {
+    width: 100%;
+    background: linear-gradient(to right,  #e0e0e0, #e0e0e0);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 119, 190, 0.2);
+    margin-top: auto;
+  }
+
+  .bookNowButtonDisabled:hover {
+    background: linear-gradient(to right, #e0e0e0, #e0e0e0);
+    box-shadow: 0 6px 8px rgba(0, 190, 158, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .roomCard {
+      margin-bottom: 20px;
+    }
+    .quantitySection {
+      margin-top: 10px;
+    }
+  }
+
+
+
+  
+.unavailableMessage {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.bookNowButtonDisabled {
+  width: 100%;
+  background: #e5e7eb !important;
+  color: #9ca3af !important;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: not-allowed;
+  box-shadow: none !important;
+  margin-top: auto;
+  transition: none !important;
+  transform: none !important;
+}
+
+.bookNowButtonDisabled:hover {
+  background: #e5e7eb !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
