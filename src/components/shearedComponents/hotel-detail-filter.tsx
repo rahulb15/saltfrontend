@@ -420,7 +420,8 @@ const HotelDetailNew = ({ rooms, selectedRoomType,id }: any) => {
     const fetchHotelDetails = async () => {
       try {
         console.log('Fetching hotel details...');
-        const response = await axios.get<HotelResponse>(`http://localhost:5001/api/v1/hotels/${id}`);
+        // const response = await axios.get<HotelResponse>(`http://localhost:5001/api/v1/hotels/${id}`);
+        const response = await axios.get<HotelResponse>(`${process.env.NEXT_PUBLIC_API_URL}/hotels/${id}`);
         console.log(response);
         if (response.data.status === 'success') {
           setHotelData(response.data.data);
@@ -428,7 +429,8 @@ const HotelDetailNew = ({ rooms, selectedRoomType,id }: any) => {
           // Fetch details for each amenity
           const amenityDetails = await Promise.all(
             amenityIds.map(async (id: string) => {
-              const amenityResponse = await axios.get<AmenityResponse>(`http://localhost:5001/api/v1/amenities/${id}`);
+              // const amenityResponse = await axios.get<AmenityResponse>(`http://localhost:5001/api/v1/amenities/${id}`);
+              const amenityResponse = await axios.get<AmenityResponse>(`${process.env.NEXT_PUBLIC_API_URL}/amenities/${id}`);
               return amenityResponse.data.data;
             })
           );

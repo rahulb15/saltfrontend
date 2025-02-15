@@ -772,7 +772,8 @@ const CheckoutArea: React.FC = () => {
         order_id: orderData.orderId,
         handler: async (response: any) => {
           try {
-            const verificationResponse = await fetch("http://localhost:5001/api/v1/payments/verify", {
+            // const verificationResponse = await fetch("http://localhost:5001/api/v1/payments/verify", {
+            const verificationResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/payments/verify`, {
               method: "POST",
               headers: { 
                 "Content-Type": "application/json",
@@ -880,7 +881,8 @@ const CheckoutArea: React.FC = () => {
         console.log("Total Amount:", totalAmount);
         
         try {
-          const orderResponse = await fetch("http://localhost:5001/api/v1/payments/create-order", {
+          // const orderResponse = await fetch("http://localhost:5001/api/v1/payments/create-order", {
+          const orderResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/payments/create-order`, {
             method: "POST",
             headers: { 
               "Content-Type": "application/json",

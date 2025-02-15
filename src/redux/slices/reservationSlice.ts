@@ -43,7 +43,8 @@ const initialState: ReservationState = {
 };
 
 // API base URL
-const API_URL = 'http://localhost:5001/api/v1';
+// const API_URL = 'http://localhost:5001/api/v1';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api/v1';
 
 // Helper function to get auth token
 const getAuthHeader = () => {

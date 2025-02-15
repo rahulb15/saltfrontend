@@ -457,7 +457,8 @@ export interface GetHotelsArgs {
 export const hotelApi = createApi({
   reducerPath: 'hotelApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:5001/api/v1',
+    // baseUrl: 'http://localhost:5001/api/v1',
+    baseUrl: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api/v1',
     prepareHeaders: (headers) => {
       const token = localStorage.getItem('token');
       if (token) {

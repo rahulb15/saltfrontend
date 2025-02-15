@@ -1004,7 +1004,8 @@ const HotelDetails = ({ id }: { id: string | number }) => {
         setIsLoading(true);
         setError(null);
 
-        const response = await axios.get(`http://localhost:5001/api/v1/room/compare-listings/${id}`, {
+        // const response = await axios.get(`http://localhost:5001/api/v1/room/compare-listings/${id}`, {
+        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/room/compare-listings/${id}`, {
           params: {
             check_in_date: checkIn,
             check_out_date: checkOut,
