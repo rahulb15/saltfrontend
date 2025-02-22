@@ -62,11 +62,11 @@ export const createReservation = createAsyncThunk<
   { state: RootState }
 >(
   'reservation/create',
-  async ({ bookingData, hotelId,roomData,discountedBookings }, { rejectWithValue }) => {
+  async ({ bookingData, hotelId,roomData,discountedBookings, otp }, { rejectWithValue }) => {
     try {
       const response = await axios.post<ReservationResponse>(
         `${API_URL}/bookings/create`,
-        { bookingData, hotelId,roomData,discountedBookings },
+        { bookingData, hotelId,roomData,discountedBookings,otp },
         {
           headers: {
             ...getAuthHeader(),

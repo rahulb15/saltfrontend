@@ -651,6 +651,7 @@ const HotelGridLeft = () => {
     id: hotel._id,
     img: hotel.mainImage || hotel.images[0] || '/placeholder-hotel.jpg',
     name: hotel.name,
+    roomName: hotel.roomName,
     location: `${hotel.address.city}, ${hotel.address.country}`,
     type: hotel.type,
     highlightFeature: hotel.propertyHighlights || hotel.description?.substring(0, 100) + '...',

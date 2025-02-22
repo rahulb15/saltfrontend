@@ -1063,6 +1063,7 @@ interface IHotelPropsType {
     img: string;
     images?: string[];
     name: string;
+    roomName: string;
     location: string;
     distanceFromLandmark: string;
     type: string;
@@ -1280,6 +1281,15 @@ const HotelSingleCard: React.FC<IHotelPropsType> = ({ hotel: hotelProps }) => {
 
           <div className="room-details-section">
             <h2 className="room-title">{hotel.name}</h2>
+
+            {/* //rrom name */}
+            <p className="room-name">
+              {hotel.roomName}
+            </p>
+            
+
+
+
             <p className="room-location">
               <span>📍</span> {hotel.location} | {hotel.distanceFromLandmark}
             </p>
