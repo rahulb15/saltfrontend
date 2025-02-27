@@ -654,16 +654,17 @@
 .bd-sticky .main-menu li a {
   color: var(--bd-heading);
 }
-.bd-sticky .main-menu li a::before {
-  background-color: var(--bd-primary);
-}
-.bd-sticky .main-menu > ul > li:hover > a {
-  color: var(--bd-white);
-}
+// .bd-sticky .main-menu li a::before {
+//   background-color: var(--bd-primary);
+// }
+// .bd-sticky .main-menu > ul > li:hover > a {
+//   color: var(--bd-white);
+// }
 
 // header menu two
 .main-menu-two.main-menu li a {
-  color: var(--bd-white);
+  color: #3d4043;
+  margin-right: 40px;
 }
 // header menu three
 .main-menu-three {
@@ -676,4 +677,45 @@
   &.main-menu > ul > li:hover > a {
     color: var(--bd-white);
   }
+}
+
+
+/* Specific dotted underline for main menu items only */
+// .header-menu .main-menu > ul > li > a {
+//   position: relative;
+//   display: inline-block;
+//   padding-bottom: 5px;
+// }
+
+.header-menu .main-menu > ul > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Position below the text */
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-image: linear-gradient(to right, #36b44a 50%, transparent 50%);
+  background-size: 8px 1px;
+  background-repeat: repeat-x;
+  opacity: 1; /* Always visible */
+}
+
+/* For the "Hotels" menu item that's highlighted in green */
+.header-menu .main-menu > ul > li.highlight > a {
+  color: #36b44a; /* Use the green color from your brand */
+}
+
+/* Override any hover effects that might conflict */
+.header-menu .main-menu > ul > li:hover > a::after {
+  opacity: 1;
+}
+
+/* Make sure it works in sticky header too */
+.bd-sticky .header-menu .main-menu > ul > li > a::after {
+  background-image: linear-gradient(to right, #36b44a 50%, transparent 50%);
+}
+
+/* To ensure submenu items DON'T get the dotted line */
+.header-menu .main-menu > ul > li > ul > li > a::after {
+  display: none;
 }

@@ -1,0 +1,165 @@
+/* components/DestinationsSection.module.css */
+
+.destinationsContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  /* Left curve decoration */
+  .leftCurveDecoration {
+    flex: 0 0 auto;
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .curveImage {
+    object-fit: contain;
+  }
+  
+  /* Main content section */
+  .contentSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+  }
+  
+  /* Header section with title and lightbulb */
+  .headerSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .titleWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+  }
+  
+  .ovalContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .ovalImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+  }
+  
+  .destinationsTitle {
+    font-size: 28px;
+    font-weight: bold;
+    color: #35b049; /* Same green as in HotelCategories */
+    z-index: 1;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .lightBulbSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .lightBulbIcon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+  
+  .greenLine {
+    width: 600px; /* Match with the image width */
+    height: 2px;
+    background-color: #35b049; /* Same green as title */
+    margin-top: 10px;
+  }
+  
+  /* Destinations grid */
+  .destinationsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 10px;
+  }
+  
+  .destinationItem {
+    text-align: center;
+    color: #999; /* Gray color matching the HotelCategories */
+    font-size: 16px;
+  }
+  
+  /* Right luggage decoration */
+  .rightLuggageDecoration {
+    flex: 0 0 auto;
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .luggageImage {
+    object-fit: contain;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .greenLine {
+      width: 400px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .destinationsContainer {
+      flex-direction: column;
+    }
+    
+    .leftCurveDecoration, .rightLuggageDecoration {
+      display: none;
+    }
+    
+    .headerSection {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .titleWrapper {
+      margin-bottom: 20px;
+    }
+    
+    .greenLine {
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    .destinationsGrid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, auto);
+    }
+    
+    .destinationItem {
+      grid-column: auto !important;
+      grid-row: auto !important;
+    }
+  }

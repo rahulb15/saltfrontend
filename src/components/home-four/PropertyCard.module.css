@@ -1,0 +1,162 @@
+/* Property Card Styles - Matching exactly with the new design */
+
+/* Property Card Container */
+.propertyCard {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .propertyCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Property Image Container */
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+  }
+  
+  /* Property Type Label - White text on transparent background */
+  .propertyType {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blur effect for glass look */
+    color: white;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 10;
+    text-transform: uppercase;
+  }
+  
+  /* Promo Badge - Red with white text */
+  .promoTag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #EB5757; /* Red for promo */
+    color: #FFFFFF;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 10;
+  }
+  
+  /* Hotel Name Styling */
+  .hotelNameWrapper {
+    padding: 15px 15px 0;
+    text-align: left;
+    position: relative;
+  }
+  
+  .hotelName {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    margin-bottom: 5px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .hotelName:hover {
+    color: #36B44A;
+  }
+  
+  /* Green Line Container */
+  .greenLineContainer {
+    width: 100%;
+    height: 3px;
+    margin-top: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .greenLine {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Price Line Styling */
+  .priceLine {
+    padding: 5px 15px 15px;
+    text-align: left;
+  }
+  
+  .startingPrice {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .priceValue {
+    color: #36B44A;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  /* Making sure gallery images hover effect works */
+  .propertyCard:hover :global(.galleryImage) {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .propertyCard {
+      margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .imageContainer {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .imageContainer {
+      height: 200px;
+    }
+    
+    .hotelNameWrapper {
+      padding: 12px 12px 0;
+    }
+    
+    .priceLine {
+      padding: 5px 12px 12px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .imageContainer {
+      height: 180px;
+    }
+    
+    .hotelName {
+      font-size: 14px;
+    }
+    
+    .priceValue {
+      font-size: 14px;
+    }
+  }

@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import HeaderOne from "./header/HeaderOne";
 import { animationCreate } from "@/utils/utils";
 import HeaderArea from "./header/HeaderArea";
+import Header from "./header/Header";
 import FooterArea from "./footer/FooterArea";
 import FooterOne from "./footer/FooterOne";
 import HeaderTwo from "./header/HeaderTwo";
@@ -15,7 +16,7 @@ import FooterTwo from "./footer/FooterTwo";
 import HeaderThree from "./header/HeaderThree";
 import FooterAreaThree from "./footer/FooterAreaThree";
 import HeaderFour from "./header/HeaderFour";
-import FooterAreaFour from "./footer/FooterAreaFour";
+import FooterAreaFour from "./footer/FooterAreaMain";
 import HeaderFive from "./header/HeaderFive";
 import FooterAreaFive from "./footer/FooterAreaFive";
 import TourListingHeader from "./header/TourListingHeader";
@@ -56,7 +57,7 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
           {(() => {
             switch (pathName) {
               case "/":
-                return <HeaderArea />;
+                return <Header />;
               case "/home":
                 return <HeaderOne />;
               case "/home-two":
