@@ -88,8 +88,7 @@ const HotelDealsCarousel = () => {
             <img 
               src="/svgs/SVGs (11).svg" 
               alt="Ideas" 
-              width={60}
-              height={60}
+              width={120}
             />
           </div>
           
@@ -100,8 +99,8 @@ const HotelDealsCarousel = () => {
             <img 
               src="/svgs/SVGs (10).svg" 
               alt="Decoration" 
-              width={120}
-              height={150}
+              width={300}
+              className="dec-img"
             />
           </div>
         </div>

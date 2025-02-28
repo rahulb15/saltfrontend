@@ -671,17 +671,7 @@
     cursor: pointer;
   }
   
-  .saltstayz-flash-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    background-color: var(--white);
-    width: 32px;
-    height: 32px;
-    border-radius: 5px;
-    padding: 4px;
-  }
+  
   
   .flash-text {
     display: flex;
@@ -1100,15 +1090,9 @@
   }
   
   .saltstayz-flash-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 8px;
-    background-color: var(--white);
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
-    padding: 0;
+    img{
+      filter: invert(1);
+    }
   }
   
   .saltstayz-flash-text,

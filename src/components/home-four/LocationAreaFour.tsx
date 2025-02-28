@@ -3,20 +3,8 @@ import SearchFilter from "../shearedComponents/SearchFilterMain";
 const LocationAreaFour = () => {
   return (
     <>
-      <div className="bd-location-search-area">
-        <div className="container">
-          <div className="row gy-24 align-items-center justify-content-center section-title-space">
-            {/* <div className="col-xl-6 col-md-8">
-              <div className="section-title-wrapper text-center">
-                <span className="section-subtitle mb-10">
-                  Explore Our Hotels
-                </span>
-                <h2 className="section-title">Find Your Ideal Hotel Here</h2>
-              </div>
-            </div> */}
-          </div>
+      <div className="bd-location-search-area ss-location">
           <SearchFilter />
-        </div>
       </div>
     </>
   );

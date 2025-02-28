@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <>
    <div className="blanck-space"
-   style={{height: "100px"}}
+   style={{height: "56px"}}
    ></div>
 
     </>

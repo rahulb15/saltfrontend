@@ -205,15 +205,15 @@ const SaltStayzHome = () => {
     <div className="saltstayz-main-container">
       {/* Search Section */}
       <section className="saltstayz-search-section">
-        <div className="saltstayz-container">
+        <div className="container">
           <div className="saltstayz-search-box">
             <div className="saltstayz-search-field hotel-select">
+              <div className="saltstayz-select-wrapper input-grp">
               <label>Select your Hotel</label>
-              <div className="saltstayz-select-wrapper">
                 <select 
                   value={selectedHotel}
                   onChange={(e) => setSelectedHotel(e.target.value)}
-                  className="saltstayz-select"
+                  className="saltstayz-select select-input"
                 >
                   {hotelOptions.map((option) => (
                     <option key={option.id} value={option.option.toString()}>
@@ -241,7 +241,7 @@ const SaltStayzHome = () => {
                 selected={endDate}
                 onChange={(date) => setDateRange([startDate, date])}
                 placeholderText="Select Check out date"
-                className="saltstayz-datepicker"
+                className="saltstayz-datepicker select-input"
                 minDate={startDate || new Date()}
               />
             </div>

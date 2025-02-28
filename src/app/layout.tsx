@@ -48,6 +48,7 @@ if (typeof window !== "undefined") {
   require("bootstrap/dist/js/bootstrap");
 }
 import "../style/index.scss";
+import '@/style/ss-style.css';
 import AppProvider from "@/contextApi/AppProvider";
 import ReduxProvider from "@/redux/provider";
 import 'bootstrap/dist/css/bootstrap.min.css';

@@ -19,8 +19,9 @@ interface RoomCategory {
 
 const HotelCategories: React.FC = () => {
   return (
-    <div className={styles.hotelCategoriesContainer}>
-      <div className={styles.headerSection}>
+    <div className={`hotel-category ${styles.hotelCategoriesContainer}`}>
+      <div className={`text-content ${styles.headerSection}`}>
+        <div className="left-side">
         <div className={styles.titleContainer}>
           <h1 className={styles.mainTitle}>Comforts</h1>
           <h1 className={styles.subTitle}>designed for you</h1>
@@ -34,15 +35,18 @@ const HotelCategories: React.FC = () => {
             height={60} 
             priority
           />
-          <div className={styles.greenLine}></div>
+            <img src="/index/straightline.png" alt="" />
+
         </div>
+        </div>
+        
       </div>
 
       <div className={styles.categoriesContainer}>
         {roomCategories.map((category, index) => (
-          <div key={index} className={styles.categorySection}>
-            <div className={styles.categoryHeader}>
-              <div className={styles.categoryBadge}>
+          <div key={index} className={`room-cate-card${styles.categorySection}`}>
+            <div className={`header-room ${styles.categoryHeader}`}>
+              <div className={`${styles.categoryBadge} primer-bg`}>
                 <span className={styles.categoryType}>{category.type}</span>
               </div>
               <div className={styles.roomImageContainer}>
@@ -58,7 +62,7 @@ const HotelCategories: React.FC = () => {
             </div>
 
             {category.amenities.length > 0 && (
-              <div className={styles.amenitiesContainer}>
+              <div className={`category-div ${styles.amenitiesContainer}`}>
                 {category.amenities.map((amenity, amIndex) => (
                   <div key={amIndex} className={styles.amenityItem}>
                     <div className={styles.amenityIcon}>

@@ -6,13 +6,13 @@ import styles from "./FooterArea.module.css";
 
 const FooterArea = () => {
   return (
-    <footer className={styles.footerArea}>
-      <div className={styles.container}>
+    <footer className={`ss-footer ${styles.footerArea}`}>
+      <div className="container">
         <div className={styles.topSection}>
           <div className={styles.brandSection}>
             <div className={styles.logoWrapper}>
               <h2 className={styles.logoText}>
-                <img src="/assets/logo/Logo_White.webp" alt="Saltstayz Logo" />
+                <img src="/assets/logo/Logo_White.webp" alt="Saltstayz Logo" width={200} className="ms-5"/>
               </h2>
             </div>
             <p className={styles.brandDescription}>
@@ -58,13 +58,12 @@ const FooterArea = () => {
           </div>
         </div>
 
-        <div className={styles.divider}></div>
+        <div className={`divider ${styles.divider}`}></div>
 
-        <div className={styles.bottomSection}>
-          <div className={styles.copyright}>
-            <p>©2025 Saltstayz</p>
-          </div>
+        <div className={`${styles.bottomSection} footer-bottom`}>
+          
           <div className={styles.policyLinks}>
+          <p className="m-0">©2025 Saltstayz</p>
             <Link href="/terms">Terms & Conditions</Link>
             <Link href="/cancellation">Cancellation Policy</Link>
             <Link href="/privacy-cookie">Privacy & Cookie Policy</Link>
