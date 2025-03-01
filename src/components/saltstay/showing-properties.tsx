@@ -37,9 +37,21 @@ const ShowingProperties = () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 990,
         settings: {
           slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
         },
       },
     ],
@@ -50,15 +62,35 @@ const ShowingProperties = () => {
     <Container >
       <div className="text-content">
         <div className="row">
-          <div className="col-md-3"></div>
-          <div className="col-md-4">
-          <h6>Showing Properties in Gurgaon</h6>
-          </div>
-          <div className="col-md-4">
+          <div className="col-lg-3"></div>
+          <div className="col-lg-9 text-heading">
+            <h6>Showing Properties in Gurgaon</h6>
             <img src="/index/straightline.png" alt="" />
           </div>
+         
         </div>
       </div>
+      <Slider {...settings}>
+        {cityData.map((city, index) => (
+          <div key={index} className="p-3">
+            <div className="city">
+                <div className="img-bg">
+                <Image
+                    src={city.image}
+                    alt={city.name}
+                    width={400}
+                    height={250}
+                    className="card-img-top"
+                />
+                <div className="badge">{city.bade}</div>
+                </div>
+                <p className="card-title">{city.name}</p>
+                <img src="/index/bottom-line.png" alt="" className="bottom-line" />
+                <h5 className="card-title">Starting @  <span> {city.startingAt}</span></h5>
+            </div>
+          </div>
+        ))}
+      </Slider>
       <Slider {...settings}>
         {cityData.map((city, index) => (
           <div key={index} className="p-3">

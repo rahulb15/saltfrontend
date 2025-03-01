@@ -8,15 +8,20 @@
 }
 
 main {
-    padding-top: 56px;
+    padding-top: 0;
 }
 .ss-header {
     padding: 15px 55px;
+    position: static;
     .header-logo{
         img {
             width: 150px!important;
         }
     } 
+
+    button.close-btn{
+        display: none;
+    }
     .header-menu {
         text-align: center;
         width: 100%;
@@ -35,7 +40,7 @@ main {
                 align-items: center;
                 width: 100%;
 
-                a.link {
+                a {
                     padding: 0;
                     margin: 0;
                     font-size: 14px;
@@ -44,6 +49,19 @@ main {
             }
 
         }
+    }
+}
+
+.text-heading{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    h6{
+        min-width: fit-content;
+        font-weight: 400;
+    }
+    img{
+        width: inherit;
     }
 }
 
@@ -88,13 +106,62 @@ main {
 
 .ss-footer {
     border-radius: 18px;
-    p{
-        font-size: 20px;
+    position: relative;
+    background: #2ab540;
+    .leftside-footer {
+        width: 55%;
+        padding: 0 51px  0 0;
     }
-    p, h3{
+    .rightside-footer {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+        padding-right: 13%;
+        .luggage-icon {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            right: 0;
+            bottom: 46px;
+        }
+    }
+  
+
+
+     p {
+        font-size: 25px;
+        font-weight: 400!important;
         color: #fff;
+
+    }
+    h3, a{
+        color: #fff;
+        font-weight: 700;
     }
 
+    h3{
+        font-size: 24px;
+    }
+    a{
+        font-size: 17px;
+    }
+
+    .footer-bottom{
+        display: flex;
+        justify-content: flex-end;
+        .policy{
+            border-top: 4px solid #fff;
+            max-width: 1100px;
+            text-align: right;
+            margin-top: -24px;
+            padding-top: 7px;
+        }
+       
+        a, p {
+            font-size: 13px !important;
+            font-weight: 400;
+        }
+    }
     .footer-bottom {
         display: flex;
         justify-content: flex-end;
@@ -208,7 +275,7 @@ main {
 }
 
 .ss-city-slider{
-    padding: 1rem;
+    padding-top:2rem;
     border-bottom: 5px solid #d9d9d9;
     padding-bottom: 0;
     position: relative;
@@ -244,7 +311,7 @@ main {
         width: 100px;
         float: right;
         position: absolute;
-        right: 0;
+        right: 50px;
         top: 1px;
     }
     
@@ -253,13 +320,15 @@ main {
 
 .slick-prev, .slick-next{
     background: url("../../public/index/arrow.png") !important;
-    background-color: #fff!important;
+    background-color: #fff !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
-    background-size: 59%!important;
-    width: 60px !important;
-    height: 60px !important;
+    background-size: 88% !important;
+    width: 51px !important;
+    height: 53px !important;
+    border-radius: 50%;
     right: -80px !important;
+    z-index: 1;
     &::before{
         display: none;
     }
@@ -299,7 +368,7 @@ main {
             p.card-title {
                 text-align: center;
                 font-size: 14px!important;
-                color: #000;
+                color: #3d4043;
             }
             h5.card-title {
                 color: #a6a6a6;
@@ -312,8 +381,10 @@ main {
                 
             }
             img.bottom-line {
-                height: 10px!important;
+                height: 5px !important;
+                margin-bottom: 5px;
             }
+            
 
             p.card-title {
                 text-align: center;
@@ -330,23 +401,42 @@ main {
     h2 {
         font-size: 33px;
         color: var(--primary-bg);
+        width: max-content;
+    }
+    p{
+        width: max-content;
     }
 
     .bulb {
-        width: 130px!important;
+        width: 80px!important;
     }
 
     .left-side {
         display: flex;
         align-items: center;
         gap: 10px;
+        flex-direction: row;
         .div {
             width: fit-content;
+        }
+        img.bottom-line {
+            max-width: 550px;
         }
     }
 } 
 
 .ss-deals{
+    position: relative;
+    .rightside-vector {
+        position: absolute;
+        top: -50px;
+        width: 150px;
+        right: 50px;
+    }
+
+    .text-content {
+        padding-left: 50px;
+    }
     .slick-slider{
         padding-top: 30px;
         max-width: 1030px;
@@ -357,14 +447,14 @@ main {
             min-height: 200px;
              .img-bg {
                 position: relative;
-                min-height: 185px;
+                min-height: 180px;
                 overflow: hidden;
                  img {
                     position: absolute;
                     border-radius: 0 0 176px 0;
                     left: -29px;
                     width: 89%;
-                    height: 164px;
+                    height: 150px;
                 }
 
                 .badge {
@@ -376,18 +466,23 @@ main {
                     height: 86px;
                     border-radius: 50%;
                     background: #fff;
-                    color: #000;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    flex-wrap: wrap;
-                    font-size: 20px;
-                    white-space: break-spaces;
-                    text-align: left;
-                    line-height: 1.2;
-                    color: var(--primary-bg);
+                    p{
+                        font-size: 20px;
+                        white-space: break-spaces;
+                        text-align: left;
+                        line-height: 1;
+                        color: #4fb600;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        padding-left: 10px;
+                    }
                     span{
                         color: #000;
+                        font-size: 29px;
+                        font-weight: 900;
                     }
                 }
 
@@ -398,18 +493,22 @@ main {
                     font-size: 12px;
                     top: 10px;
                     left: 10px;
+                    background: url("../../public/index/badge-salt.png");
+                    background-size: contain;
                 }
             }
 
             h5.card-title {
-                font-size: 17px;
+                min-height: 66px;
+                font-size: 19px;
                 position: relative;
-                bottom: 57px;
+                bottom: 50px;
                 color: #fff;
                 text-align: right;
-                max-width: 72%;
+                max-width: 66%;
                 float: right;
-                padding-right: 20px;
+                padding-right: 12px;
+                line-height: 1.1;
             }
         }
         
@@ -417,21 +516,380 @@ main {
 }
 
 .hotel-category{
+    max-width: 100%!important;
+    .text-content{
+        // max-width: 100%;
+    }
     .header-room {
         position: relative;
         padding-top: 88px;
-    }
-
-    .primer-bg {
-        z-index: -1;
-        top: -6px;
-        left: 21px;
-        span{
-            margin-top: -81px;
+        .img-container{
+            width: inherit;
+            height: 217px;
         }
+        .primer-bg {
+            z-index: -1;
+            top: -6px;
+            left: 0;
+            text-shadow: 2px 2px #393939;
+            span{
+                margin-top: -81px;
+            }
+        }
+
+        
     }
 
     .category-div {
         margin-left: 80px;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        .amenity-card {
+            width: 140px;
+            margin: 0;
+            .amenity-bg{
+                background-size: 80%!important;
+                background: url("../../public/index/vectorimg.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                opacity: 0.6;
+                width: 60px;
+                height: 60px;
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
     }
+}
+
+
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+
+  .room-container{
+    max-width: 1030px;
+    margin: auto;
+  }
+
+  .instafeature{
+    max-width: 100%;
+    h2 {
+        text-align: left;
+        width: fit-content;
+        &::after {
+            left: 0;
+            transform: translateX(0); 
+            width: 100%;
+            height: 8px;
+            background-color: #4CAF50;
+        }
+    }
+
+    .leftside {
+        margin: auto;
+        max-width: 1052px;
+        a {
+            padding: 2rem 3rem;
+            border-radius: 2rem;
+            border: 3px solid #4caf50;
+            color: #77797b;
+            font-size: 1.8rem;
+            font-weight: 700;
+            img{
+                width: 36px;
+                height: 36px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .centerside{
+        background: url(../../public/index/social-icon.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        max-width: 447px;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 22px;
+        padding-right: 51px;
+        button{
+            opacity: 0;
+        }
+    }
+  } 
+
+  
+  .ss-destination{
+    max-width: 1030px;
+    position: relative;
+    margin:auto;
+    min-height: 250px;
+    ul.destination-nav {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 20px 0 0 20px;
+       li {
+            width: 18%;
+           a {
+                color: #a6a6a6;
+                font-size: 18px;
+                font-weight: 700;
+                display: flex;
+            }
+        }
+    }
+    .leftside-vector {
+        position: absolute;
+        top: -70px;
+        left: -180px;
+        width: 150px;
+        transform: rotate(180deg);
+    }
+
+    .rightside-trolly {
+        position: absolute;
+        right: -200px;
+        top: 0;
+        width: 450px;
+        height: 300px;
+    }
+
+    
+  }
+
+
+
+  @media(max-width:990px){
+    .ss-search{
+        .saltstayz-search-field {
+            width: 100%;
+            .saltstayz-datepicker{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        .saltstayz-book-now-btn, .saltstayz-flash-btn{
+            width: 47.5%;
+        }
+    } 
+
+    .ss-city-slider, .ss-deals {
+        img.trollybag, .rightside-vector{
+            display: none;
+        }
+    } 
+    
+    .text-content{
+        .left-side{
+            img.bottom-line {
+                max-width: 300px;
+            }
+        }
+    } 
+
+  .slick-prev, .slick-next{
+        right: -25px !important;
+    }
+
+    .slick-prev{
+        left: -25px  !important;
+    }
+
+    .text-heading{
+        img {
+            max-width: 300px;
+        }
+    } 
+    .hotel-category{
+        .category-div {
+            justify-content: flex-start;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+        .header-room{
+            .primer-bg{
+                span {
+                    margin-top: -58px;
+                }
+            }
+        } 
+      } 
+
+      .leftside-vector, .rightside-trolly{
+        display: none;
+      }
+
+      .ss-footer{
+        .leftside-footer {
+            width: 100%;
+            padding: 0 51px 0 0;
+        }
+    } 
+  }
+
+
+
+  
+  @media (max-width: 768px) {
+    .ss-header{
+        padding: 15px 20px;
+        .mobile-menu-icon {
+            display: block;
+            position: static;
+            top: 15px;
+            right: 20px;
+          }
+          .header-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 250px;
+            height: 100vh;
+            background: #fff;
+            transition: right 0.3s ease-in-out;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            &.sidebar-open {
+                right: 0;
+                width:80%;
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                justify-content: flex-start;
+              }
+
+              .close-btn{
+                width: calc(100% - 88px);
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 0;
+               
+              }
+
+              .main-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .st-nav {
+                    list-style: none;
+                    padding: 0;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    width: 100%;
+                    li {
+                        margin-bottom: 0;
+                        a{
+                            padding: 3rem;
+                            position: relative;
+                            padding-bottom: 2rem;
+                            &::after{
+                                left: 5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            
+          }
+          .ss-destination{
+            ul.destination-nav{
+                li {
+                    width: 29%;
+                }
+            } 
+          } 
+    }
+    .ss-footer{
+        .rightside-footer{
+            .luggage-icon {
+                width: 250px;
+                height: 250px;
+                position: absolute;
+                right: 0;
+                bottom: 70px;
+            }
+        } 
+        .policy {
+            flex-direction: row;
+        }
+    } 
+
+
+    
+    }
+   
+
+
+  @media(max-width:576px){
+    .ss-search{
+        .saltstayz-select {
+            min-width: 100%;
+        }
+        .saltstayz-book-now-btn, .saltstayz-flash-btn {
+            width: 100% !important;;
+        }
+        .saltstayz-search-box{
+            padding: 4rem 2rem;
+
+        }
+    } 
+
+    .slick-prev {
+        width: 30px!important;
+        height: 30px!important;
+        left: 0!important;
+    }
+
+    .slick-next{
+        right: 0!important;
+        width: 30px!important;
+        height: 30px!important;
+        left: auto!important;
+    }
+
+    .ss-deals{
+        .slick-slider {
+            .deal-card{
+                h5.card-title{
+                    bottom: 16px;
+                    max-width: 100%;
+                }
+            }
+        }
+    }  
+
+    .hotel-category{
+        .header-room {
+            .img-container {
+                margin: 0;
+            }
+        }
+        .category-div{
+            .amenity-card {
+                width: 105px;
+                margin: 5px;
+            }
+        } 
+    } 
+
+    .instafeature{
+        .leftside, .rightside, .centerside{
+            padding: 0;
+            a {
+                width: 100%;
+            }
+        } 
+    } 
 }

@@ -5,6 +5,7 @@ import ShowingProperties from './showing-properties';
 import DealsForYou from './deals-for-you';
 import HotelCategories from '../HotelCategories';
 import InstagramSection from '../InstagramSection';
+import Destination from './destination';
 const SaltStayIndex = () => {
     return (
         <>
@@ -14,6 +15,7 @@ const SaltStayIndex = () => {
         <DealsForYou/>
         <HotelCategories/>
         <InstagramSection/>
+        <Destination/>
         </>
     );
 };

@@ -1,90 +1,61 @@
 "use client";
+import { useState } from "react";
 import { imageLoader } from "@/hooks/image-loader";
 import Image from "next/image";
-import React from "react";
-import HeaderLogo from "../../../public/assets/logo/Logo.png";
 import Link from "next/link";
 import Menu from "./components/Menu";
 import AuthButton from "./components/AuthButton";
 import useGlobalContext from "@/hooks/use-context";
+import HeaderLogo from "../../../public/assets/logo/Logo.png";
+import { FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {
-  const { toggleSideMenu, scrollDirection } = useGlobalContext();
+  const { scrollDirection } = useGlobalContext();
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <header>
-      <div
-        className={`ss-header header-area header-style header-style-two ${
-          scrollDirection === "down" ? "bd-sticky" : ""
-        }`}
-        id="header-sticky"
-      >
-          <div className="header-inner">
-            <div className="header-logo">
-              <Link href="/">
-                <Image
-                  loader={imageLoader}
-                  style={{ width: "100%", height: "auto" }}
-                  src={HeaderLogo}
-                  alt="Logo"
-                />
-              </Link>
-            </div>
-            <div className="header-menu">
-              <nav className="main-menu main-menu-two" id="mobile-menu">
-                <Menu />
-                <ul className="st-nav">
-                  <li>
-                    <a href="#" className="link">
-                    Day Use Room
-                    </a>
-                    </li>
-                    <li>
-                    <a href="#" className="link">
-                    Events
-                    </a>
-                    </li>
-                    <li>
-                    <a href="#" className="link">
-                    Hotels
-                    </a>
-                    </li>
-                    <li>
-                    <a href="#" className="link">
-                    About Us
-                    </a>
-                    </li>
-                    <li>
-                    <a href="#" className="link">
-                    Blogs
-                    </a>
-                    </li>
-                    <li>
-                    <a href="#" className="link">
-                    Contact Us
-                    </a>
-                    </li>
-                </ul>
-              </nav>
-            </div>
-            <div className="header-right d-flex align-items-center gap-24">
-              {/* <AuthButton />
-              <div
-                onClick={toggleSideMenu}
-                className="header-hamburger ml-20 d-xl-none"
-              >
-                <div className="sidebar-toggle">
-                  <Link className="bar-icon" href="/#">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </Link>
-                </div>
-              </div> */}
-            </div>
-          </div>
+    <div
+      className={`ss-header header-area header-style header-style-two ${
+        scrollDirection === "down" ? "bd-sticky" : ""
+      }`}
+      id="header-sticky"
+    >
+      <div className="header-inner">
+        <div className="header-logo">
+          <Link href="/">
+            <Image
+              loader={imageLoader}
+              style={{ width: "100%", height: "auto" }}
+              src={HeaderLogo}
+              alt="Logo"
+            />
+          </Link>
+        </div>
+        <div className="mobile-menu-icon" onClick={toggleSidebar}>
+          {isSidebarOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+        </div>
+        <div className={`header-menu ${isSidebarOpen ? "sidebar-open" : ""}`}>
+          <button className="close-btn" onClick={toggleSidebar}><FiX size={24} /></button>
+          <nav className="main-menu main-menu-two" id="mobile-menu">
+            <Menu />
+            <ul className="st-nav">
+              <li><Link href="#" onClick={toggleSidebar}>Day Use Room</Link></li>
+              <li><Link href="#" onClick={toggleSidebar}>Events</Link></li>
+              <li><Link href="#" onClick={toggleSidebar}>Hotels</Link></li>
+              <li><Link href="#" onClick={toggleSidebar}>About Us</Link></li>
+              <li><Link href="#" onClick={toggleSidebar}>Blogs</Link></li>
+              <li><Link href="#" onClick={toggleSidebar}>Contact Us</Link></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </header>
+    </div>
+  </header>
   );
 };
 

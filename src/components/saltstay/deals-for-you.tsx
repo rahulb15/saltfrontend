@@ -68,9 +68,21 @@ const DealsForYou = () => {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 990,
         settings: {
           slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
         },
       },
     ],
@@ -81,18 +93,15 @@ const DealsForYou = () => {
     <Container >
       <div className="text-content">
         <div className="row align-items-center">
-          <div className="col-md-5">
+          <div className="col-md-11">
             <div className="left-side">
                 <div className="div">
                 <h2>Deals for you </h2>
                 <p>Suggestions for you better stay</p>
                 </div>
-                <img src="/index/bulb.svg" alt="" className="bulb"/>
+                <img src="/index/bulb-heading.png" alt="" className="bulb"/>
+                <img src="/index/straightline.png" alt="" className="bottom-line"/>
             </div>
-          </div>
-         
-          <div className="col-md-6">
-            <img src="/index/straightline.png" alt="" />
           </div>
         </div>
       </div>
@@ -111,15 +120,17 @@ const DealsForYou = () => {
                     <div className="badge-salt">
                         {deal.buttonText}
                     </div>
-                <div className="badge">Get <span>{deal.discount} </span>Off</div>
+                <div className="badge"><p>Get <span>{deal.discount} </span>Off</p></div>
                 </div>
                 <h5 className="card-title">   {deal.title} <span></span></h5>
             </div>
           </div>
         ))}
       </Slider>
-
     </Container>
+    <div className="rightside-vector">
+      <img src="/index/vec-lines.svg" alt="" className="vec-lines" />
+    </div>
     </div>
   );
 };

@@ -8,11 +8,11 @@ const FooterArea = () => {
   return (
     <footer className={`ss-footer ${styles.footerArea}`}>
       <div className="container">
-        <div className={styles.topSection}>
-          <div className={styles.brandSection}>
+        <div className={`top-footer ${styles.topSection}`}>
+          <div className={`leftside-footer 7${styles.brandSection}`}>
             <div className={styles.logoWrapper}>
               <h2 className={styles.logoText}>
-                <img src="/assets/logo/Logo_White.webp" alt="Saltstayz Logo" width={200} className="ms-5"/>
+                <img src="/index/footer-logo.svg" alt="Saltstayz Logo" width={380} height={120} className="ms-md-5 ms-0"/>
               </h2>
             </div>
             <p className={styles.brandDescription}>
@@ -22,7 +22,7 @@ const FooterArea = () => {
             </p>
           </div>
 
-          <div className={styles.footerColumns}>
+          <div className={`rightside-footer ${styles.footerColumns}`}>
             <div className={styles.column}>
               <h3 className={styles.columnTitle}>Explore</h3>
               <ul className={styles.footerLinks}>
@@ -47,13 +47,10 @@ const FooterArea = () => {
             </div>
 
             {/* <div className={styles.luggageIcon}> */}
-              <Image 
-                src="/svgs/SVGs (7).svg" 
-                alt="Luggage icon"
-                width={160}
-                height={150}
-                priority
-              />
+            <div className="luggage-icon">
+                  <img src="/index/trollybag-white.png" alt="" className="vec-lines" />
+
+                </div>
             {/* </div> */}
           </div>
         </div>
@@ -62,7 +59,7 @@ const FooterArea = () => {
 
         <div className={`${styles.bottomSection} footer-bottom`}>
           
-          <div className={styles.policyLinks}>
+          <div className={`policy ${styles.policyLinks}`}>
           <p className="m-0">©2025 Saltstayz</p>
             <Link href="/terms">Terms & Conditions</Link>
             <Link href="/cancellation">Cancellation Policy</Link>

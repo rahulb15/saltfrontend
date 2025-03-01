@@ -6,7 +6,8 @@ import styles from "./InstagramSection.module.css";
 
 const InstagramSection = () => {
   return (
-    <section className={styles.instagramSection}>
+    <section className={`instafeature ${styles.instagramSection}`}>
+      <div className="container">
       <h2 className={styles.instagramTitle}>@Saltstayz on Instagram</h2>
       
       <div className={styles.instagramGrid}>
@@ -191,10 +192,10 @@ const InstagramSection = () => {
         </div>
       </div>
 
-      <div className={styles.socialLinks}>
+      <div className={`leftside ${styles.socialLinks}`}>
         <Link href="https://instagram.com/" className={styles.dmButton}>
           <Image 
-            src="/svgs/SVGs (23).svg" 
+            src="/index/instagram.png" 
             alt="Instagram" 
             width={24} 
             height={24} 
@@ -202,7 +203,7 @@ const InstagramSection = () => {
           DM us on Instagram
         </Link>
         
-        <div className={styles.socialIcons}>
+        <div className={`centerside ${styles.socialIcons}`}>
           <button className={styles.socialIcon}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.27 18.6 15.36 13.45 20.03L12 21.35Z" fill="none" stroke="white" strokeWidth="1.5"/>
@@ -226,15 +227,16 @@ const InstagramSection = () => {
           </button>
         </div>
         
-        <Link href="https://youtube.com/" className={styles.youtubeButton}>
+        <Link href="https://youtube.com/" className={`rightside ${styles.youtubeButton}`}>
           <Image 
-            src="/svgs/SVGs (24).svg" 
+            src="/index/youtube.png" 
             alt="YouTube" 
             width={24} 
             height={24} 
           />
           Subscribe us on YouTube
         </Link>
+      </div>
       </div>
     </section>
   );
