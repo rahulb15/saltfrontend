@@ -86,6 +86,8 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
                 return <HeaderDashboard />;
               case "/saltstay":
                 return <Header />;
+                case "/search-filters":
+                return <Header />;
               default:
                 return <HeaderArea />;
             }
@@ -105,7 +107,8 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
                 return <FooterAreaFive />;
               case "/saltstay":
               return <FooterAreaFour />;
-
+              case "/search-filters":
+                return <FooterAreaFour />;
               default:
                 return <FooterAreaFour />;
             }
