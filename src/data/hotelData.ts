@@ -7,7 +7,7 @@ export const roomCategories: RoomCategory[] = [
     image: "/assets/rooms/4.webp",
     amenities: [
       { icon: "/svgs/SVGs (12).svg", text: "Buffet Breakfast with Healthy Options" },
-      { icon: "/svgs/SVGs (13).svg", text: "Complimentary coffee station with snacks" },
+      { icon: "/index/coffee.svg", text: "Complimentary coffee station with snacks" },
       { icon: "/svgs/SVGs (14).svg", text: "Located at Prime Business Hubs" },
       { icon: "/svgs/SVGs (16).svg", text: "Gym" },
       { icon: "/svgs/SVGs (17).svg", text: "Premium Toiletries" },
@@ -19,7 +19,7 @@ export const roomCategories: RoomCategory[] = [
     image: "/assets/rooms/5.webp",
     amenities: [
         { icon: "/svgs/SVGs (12).svg", text: "Buffet Breakfast with Healthy Options" },
-        { icon: "/svgs/SVGs (13).svg", text: "Complimentary coffee station with snacks" },
+        { icon: "/index/coffee.svg", text: "Complimentary coffee station with snacks" },
         { icon: "/svgs/SVGs (14).svg", text: "Located at Prime Business Hubs" },
         { icon: "/svgs/SVGs (16).svg", text: "Gym" },
         { icon: "/svgs/SVGs (17).svg", text: "Premium Toiletries" },

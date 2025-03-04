@@ -2,12 +2,13 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import HotelRoom from './hotel-room';
 import HomeAmenities from './home-amenities';
+import DayUseRoomSearch from './location-search';
 const DayUseRoom = () => {
     return (
         <>
             <div className="day-use-room">
                 <Container>
-                      <div className="bookNow">
+                    <div className="bookNow">
                         <Container>
                             <Row>
                                 <Col md={12}>
@@ -23,12 +24,12 @@ const DayUseRoom = () => {
                     <div className="text-content header-div">
                         <div className="left-side">
                             <div className="div">
-                            <h2>Day Use Room</h2>
+                                <h2>Day Use Room</h2>
                             </div>
-                            <img src="/index/bulb-heading.png" alt="" className="bulb"/>
-                            
+                            <img src="/index/bulb-heading.png" alt="" className="bulb" />
+
                             <div className="bottom-div">
-                                <img src="/index/straightline.png" alt="" className="bottom-line"/>
+                                <img src="/index/straightline.png" alt="" className="bottom-line" />
                                 <ul>
                                     <li>Couple Friendly</li>
                                     <li>Local ID Accepted </li>
@@ -38,43 +39,46 @@ const DayUseRoom = () => {
                                     <li>     Pay at Hotel</li>
                                 </ul>
                             </div>
-                            
+
                         </div>
                     </div>
 
                     <div className="homeamenites-row">
-                    <Row>
-                        <Col lg={7}>
-                            <HomeAmenities/>
-                        </Col>
-                        <Col lg={5}>
-                        <div className="term-condition">
-                            <strong>Terms and conditions: </strong>
-                            <ul>
-                                <li>Check-in and check-out on the same day.</li>    
-                                <li>6-hour slot available: 8 AM to 10 PM.</li>
-                                <li>Stays longer than 6 hours are subject to availability and additional charges.</li>
-                                <li>100% booking amount required at check-in.</li>
-                            </ul>
-                        </div>
-                        </Col>
-                    </Row>
-                    </div>
-                    
-                    <HotelRoom/>
-                    <div className="check-in pt-3">
-                        <div className="checktime">
-                            <h2>Check-in 9:00AM</h2>
-                            <h2>Check-out 5:00PM</h2>
-                            <p>Stays longer than 6 hours are subject to availability and additional charges.</p>
-                        </div>
-                        <div className="img">
-                            <img src="/index/restaurant2.png" alt=""  />
-                        </div>
+                        <Row>
+                            <Col lg={8}>
+                                <HomeAmenities />
+                            </Col>
+                            <Col lg={4}>
+                                <div className="term-condition">
+                                    <strong>Terms and conditions: </strong>
+                                    <ul>
+                                        <li>Check-in and check-out on the same day.</li>
+                                        <li>6-hour slot available: 8 AM to 10 PM.</li>
+                                        <li>Stays longer than 6 hours are subject to availability and additional charges.</li>
+                                        <li>100% booking amount required at check-in.</li>
+                                    </ul>
+                                </div>
+                            </Col>
+                        </Row>
                     </div>
                 </Container>
+                <DayUseRoomSearch/>
+                <HotelRoom />
+                <Container>
+                <div className="check-in pt-3">
+                    <div className="checktime">
+                        <h2>Check-in 9:00AM</h2>
+                        <h2>Check-out 5:00PM</h2>
+                        <p>Stays longer than 6 hours are subject to availability and additional charges.</p>
+                    </div>
+                    <div className="img">
+                        <img src="/index/restaurant2.png" alt="" />
+                    </div>
+                </div>
+                </Container>
+            
             </div>
-          
+
         </>
     );
 };

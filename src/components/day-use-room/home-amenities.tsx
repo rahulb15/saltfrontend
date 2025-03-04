@@ -37,7 +37,7 @@ const HomeAmenities = () => {
                     </li>
                     <li>
                         <div className="amenties-bg">
-                        <img src="/index/gym.svg" alt=""  />
+                        <img src="/index/gym.png" alt=""  />
                         </div>
                         <p>Gym </p>
                     </li>

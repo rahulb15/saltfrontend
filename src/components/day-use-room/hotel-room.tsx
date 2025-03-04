@@ -12,7 +12,7 @@ const HotelRoom = () => {
                                 <Row className='align-items-center'>
                                     <Col  md={7} className='pe-0'>
                                         <div className="gallery-img">
-                                            <div className="badge info-badge">P R E M I E R</div>
+                                            <div className="badge primium-bagde">P R E M I E R</div>
                                                 <img src="/index/gallery-img1.jpg" alt="Selected" className="selected-img" />
                                         </div>
                                     </Col>
@@ -41,7 +41,7 @@ const HotelRoom = () => {
                                 <Row className='align-items-center'>
                                     <Col  md={7} className='pe-0'>
                                         <div className="gallery-img">
-                                            <div className="badge info-badge">P R E M I E R</div>
+                                            <div className="badge primium-bagde">P R E M I E R</div>
                                                 <img src="/index/gallery-img1.jpg" alt="Selected" className="selected-img" />
                                         </div>
                                     </Col>
@@ -70,7 +70,7 @@ const HotelRoom = () => {
                                 <Row className='align-items-center'>
                                     <Col  md={7} className='pe-0'>
                                         <div className="gallery-img">
-                                            <div className="badge info-badge">P R E M I E R</div>
+                                            <div className="badge select-badge">P R E M I E R</div>
                                                 <img src="/index/gallery-img1.jpg" alt="Selected" className="selected-img" />
                                         </div>
                                     </Col>
@@ -99,7 +99,7 @@ const HotelRoom = () => {
                                 <Row className='align-items-center'>
                                     <Col  md={7} className='pe-0'>
                                         <div className="gallery-img">
-                                            <div className="badge info-badge">P R E M I E R</div>
+                                            <div className="badge primium-bagde">P R E M I E R</div>
                                                 <img src="/index/gallery-img1.jpg" alt="Selected" className="selected-img" />
                                         </div>
                                     </Col>
@@ -128,7 +128,7 @@ const HotelRoom = () => {
                                 <Row className='align-items-center'>
                                     <Col  md={7} className='pe-0'>
                                         <div className="gallery-img">
-                                            <div className="badge info-badge">P R E M I E R</div>
+                                            <div className="badge primium-bagde">P R E M I E R</div>
                                                 <img src="/index/gallery-img1.jpg" alt="Selected" className="selected-img" />
                                         </div>
                                     </Col>
@@ -157,7 +157,7 @@ const HotelRoom = () => {
                                 <Row className='align-items-center'>
                                     <Col  md={7} className='pe-0'>
                                         <div className="gallery-img">
-                                            <div className="badge info-badge">P R E M I E R</div>
+                                            <div className="badge express-bagde">P R E M I E R</div>
                                                 <img src="/index/gallery-img1.jpg" alt="Selected" className="selected-img" />
                                         </div>
                                     </Col>

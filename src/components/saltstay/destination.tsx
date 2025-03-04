@@ -18,7 +18,7 @@ const Destinations = () => {
         <div className="row align-items-center">
           <div className="col-md-11">
             <div className="left-side">
-                <div className="div">
+                <div className="div destination-img-bg">
                 <h2>Destination </h2>
                 </div>
                 <img src="/index/bulb-heading.png" alt="" className="bulb"/>
