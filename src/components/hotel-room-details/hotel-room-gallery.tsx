@@ -41,13 +41,13 @@ const HotelRoomGallery = () => {
                                     <Col lg={12} className='pe-0'>
                                         <div className="gallery-img">
                                             <Row>
-                                                <Col md={8}>
+                                                <Col xs={8}>
                                                     <div className='position-relative h-100'>
                                                         <div className="badge">P R E M I E R</div>
                                                         <img src={selectedImage} alt="Selected" className="selected-img" />
                                                     </div>
                                                 </Col>
-                                                <Col md={4}>
+                                                <Col xs={4}>
                                                     <div className="d-flex justify-content-center gap-2 flex-column">
                                                         {images.map((img, idx) => (
                                                             <img

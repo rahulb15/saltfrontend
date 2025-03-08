@@ -4,6 +4,10 @@ import HotelRoomDetail from './hotel-room-detail';
 import HotelRoomGallery from './hotel-room-gallery';
 import HotelAmenities from './hotel-amenities';
 import AvailabilityAndSummary from './availablity-summary';
+import GuestDetails from './guest-details';
+import GoogleReviews from './google-reviews';
+import LocationDetails from './location';
+
 const HotelRoomDetails = () => {
     return (
         <>
@@ -24,8 +28,8 @@ const HotelRoomDetails = () => {
             <HotelRoomDetail />
             <HotelAmenities/>
             <AvailabilityAndSummary/>
-
-              <Container>
+            
+            <Container>
                 <div className="check-in pt-3">
                     <div className="checktime">
                         <h2>Check-in 2:00pm </h2>
@@ -38,6 +42,9 @@ const HotelRoomDetails = () => {
                 </div>
             </Container>
 
+            <GuestDetails/>
+            <GoogleReviews/>
+            <LocationDetails/>
         </>
     );
 };

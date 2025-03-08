@@ -8,22 +8,22 @@ const mealOptions = [
         id: 'breakfast',
         name: 'Breakfast',
         image: '/index/breakfast-meal.png',
-        cutPrice: '$415',
-        actualPrice: '$310',
+        cutPrice: '415 /-',
+        actualPrice: '₹310 /-',
     },
     {
         id: 'lunch',
         name: 'Lunch',
         image: '/index/lunch-meal.png',
-        cutPrice: '$320',
-        actualPrice: '$215',
+        cutPrice: '320 /-',
+        actualPrice: '₹215 /-',
     },
     {
         id: 'dinner',
         name: 'Dinner',
         image: '/index/dinner-meal.png',
-        cutPrice: '$425',
-        actualPrice: '$320',
+        cutPrice: '425/-',
+        actualPrice: '₹320 /-',
     }
 ];
 const Summary = () => {
@@ -101,23 +101,25 @@ const Summary = () => {
                 </Row>
 
                 <Row className='justify-content-center'>
-                    <Col md={9}>
-                        <div className="discount-couupen">
+                    <Col md={10}>
+                    <div className="discount-div">
+                        <div className="discount-coupen">
                                 <h5>
                                <span> Signup/Login </span>for discount
                                 </h5>
                                 <div className="flex-row">
-                                    <input type="radio" name="check" id="" />
+                                    <input type="checkbox" name="check" id="" />
                                     <div className="rightside">
                                     <h4>SALTLOVERS10</h4>
                                     <p><span>Flat 10% off on first booking</span> Terms & Conditions</p>
                                     </div>
-                                    
                                 </div>
-                           
+                                <img src="/index/cut.png" alt="" className='scissor-icon' />
                         </div>
-                        {/* <Link href='#' className='bookNow'>Book Now</Link> */}
-                    
+                        <div className="flex-row">
+                            <a href='#' className='btn book-now'>Book</a>
+                        </div>
+                        </div>
                     </Col>
                 </Row>
             </div>

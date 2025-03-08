@@ -1,14 +1,15 @@
+import AboutMain from "@/components/about-old/AboutMain";
 import MetaData from "@/hooks/useMetaData";
 import Wrapper from "@/layout/DefaultWrapper";
 import React from "react";
-import About from "@/components/about";
+
 const AboutPage = () => {
   return (
     <>
-      <MetaData pageTitle="">
+      <MetaData pageTitle="About-old">
         <Wrapper>
           <main>
-            <About />
+            <AboutMain />
           </main>
         </Wrapper>
       </MetaData>
