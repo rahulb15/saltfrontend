@@ -1,14 +1,14 @@
+import ContactMain from "@/components/contact-old/ContactMain";
 import MetaData from "@/hooks/useMetaData";
 import Wrapper from "@/layout/DefaultWrapper";
 import React from "react";
-import ContactUs from "@/components/contact";
 const ContactPage = () => {
   return (
     <>
       <MetaData pageTitle="Contact">
         <Wrapper>
           <main>
-            <ContactUs />
+            <ContactMain />
           </main>
         </Wrapper>
       </MetaData>

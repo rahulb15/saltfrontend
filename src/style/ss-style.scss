@@ -65,10 +65,10 @@ main {
 .ss-footer {
     border-radius: 18px;
     position: relative;
-    background: #2ab540;
+    background: #2ab540!important;
 
     .leftside-footer {
-        width: 55%;
+        width: 47%;
         padding: 0 51px 0 0;
     }
 
@@ -108,6 +108,19 @@ main {
 
     a {
         font-size: 17px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 52px;
+            height: .5px;
+            background-image: linear-gradient(to right, #fff 50%, transparent 50%);
+            background-size: 3px 1px;
+            background-repeat: repeat-x;
+            opacity: 1;
+        }
     }
 
     .footer-bottom {
@@ -126,6 +139,9 @@ main {
         p {
             font-size: 13px !important;
             font-weight: 400;
+            &::after{
+                display: none;
+            }
         }
     }
 
@@ -636,6 +652,7 @@ main {
             transform: translateX(0);
             width: 100%;
             height: 8px;
+            border-radius: 1rem;
             background-color: #4CAF50;
         }
     }
@@ -682,7 +699,17 @@ main {
     position: relative;
     margin: auto;
     min-height: 250px;
-
+    .destination-img-bg{
+        background: url("../../public/index/circle-bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 76px;
+        width: 333px!important;
+        
+    }
     ul.destination-nav {
         display: flex;
         justify-content: flex-start;
@@ -2065,7 +2092,7 @@ main {
             border-radius: 2rem;
             padding: 1rem;
             margin-top: 1rem;
-
+            min-height: 192px;
             li {
                 margin-bottom: 0;
                 position: relative;
@@ -2215,10 +2242,10 @@ main {
         &::before {
             content: "";
             position: absolute;
-            bottom: 5px;
+            bottom: 2px;
             left: 0;
             width: 97%;
-            height: 5px;
+            height: 8px;
             background: var(--primary-bg);
             border-radius: 1rem;
             z-index: -1;
@@ -2269,6 +2296,19 @@ main {
         .slick-slide {
             margin-top: 0;
         }
+       .slick-prev,  .slick-next {
+            top: 50%;
+            background: url(/index/arrow-icon.png) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: 30%  !important;
+            left: -40px !important;
+        }
+
+         .slick-next{
+            left: auto !important;
+            right: -40px !important;
+        }
     }
 
     .review-card {
@@ -2314,11 +2354,21 @@ main {
 .booking-off {
     max-width: 1100px;
     margin: auto;
+    .slick-prev {
+        left: -28px !important;
+        background-color: transparent!important;
+        background-size: 66% !important;
+    }
+    .slick-next {
+        right: -28px !important;
+        background-color: transparent!important;
+        background-size: 66% !important;
+    }
 }
 
 .booking {
     background: #0000000f;
-    border-radius: 3rem;
+    border-radius: 6rem;
     padding: 0 2rem;
 
     img.booking-img {
@@ -2357,6 +2407,117 @@ main {
 
 }
 
+.contact-details {
+    max-width: 1200px;
+    margin: auto;
+    img.icon {
+        width: 80px;
+    }
+    .link {
+        font-size: 34px;
+        font-weight: 700;
+        color: var(--primary-bg);
+    }   
+} 
+
+.contact-blogs{
+    padding: 2rem 0;
+    .blog-card {
+        overflow: hidden;
+        border-radius: 2rem;
+        position: relative;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: rgba(43,41,41,.3882352941);
+            position: absolute;
+            left: 0;
+        }
+        img{
+            height: 55px;
+
+        }
+    }
+    h5 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.other-enquiries{
+    position: relative;
+    .leftside-vector {
+        position: absolute;
+        top: -20px;
+        left: -110px;
+        width: 200px;
+        transform: rotate(180deg);
+    }
+    .enquiry-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4rem;
+        p{
+            margin: 0;
+        }
+        .text-gray{
+            font-weight: 700;
+            font-size: 22px;
+            color: #77797b;
+        }
+        img {
+            width: 70px;
+            margin: 1rem 0;
+        }
+        
+    }
+   
+} 
+
+.contact-us{
+    h1{
+        min-width: 450px;
+        text-align: center;
+        font-size: 45px;
+        &::before {
+            bottom: -3px;
+        }
+    }
+    .instafeature{
+        h2 {
+            color: #3d4043;
+            font-size: 45px;
+            padding-top: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+            width: -moz-fit-content;
+            width: fit-content;
+            min-width: 450px;
+            text-align: center;
+        }
+        
+        .leftside{
+            justify-content: center;
+            gap: 2rem;
+            .centerside {
+                display: none;
+            }
+        } 
+    } 
+    .info-detail{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+    }
+}
 
 @media(max-width:1024px) {
     .book-now {
@@ -2559,6 +2720,12 @@ main {
     .desktop-img {
         display: none;
     }
+
+    .contact-details{
+        img.icon {
+            width: 50px;
+        }
+    } 
 }
 
 
@@ -2905,4 +3072,26 @@ main {
             padding-bottom: 3rem;
         }
     }
+
+    .contact-us{
+        section.instafeature {
+            padding: 2rem 0;
+            h2 {
+                min-width: fit-content;
+                text-align: left;
+            }
+        }
+        h1 {
+            min-width: fit-content;
+            text-align: left;
+        }
+        .contact-details{
+            .link {
+                font-size: 27px;
+            }
+        }
+        .guest-div {
+            padding-left: 0;
+        } 
+    } 
 }

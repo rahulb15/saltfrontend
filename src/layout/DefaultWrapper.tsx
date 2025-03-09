@@ -96,6 +96,8 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
               return <Header />;
               case "/about":
               return <Header />;
+              case "/contact":
+              return <Header />;
               default:
                 return <HeaderArea />;
             }
@@ -126,6 +128,8 @@ const Wrapper: React.FC<WrapperProps> = ({ children }) => {
               case "/blog":
               return <FooterAreaFour />;
               case "/about":
+              return <FooterAreaFour />;
+              case "/contact":
               return <FooterAreaFour />;
               default:
                 return <FooterAreaFour />;

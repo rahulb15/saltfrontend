@@ -44,12 +44,12 @@ const Header = () => {
           <nav className="main-menu main-menu-two" id="mobile-menu">
             <Menu />
             <ul className="st-nav">
-              <li><Link href="#" onClick={toggleSidebar}>Day Use Room</Link></li>
+              <li><Link href="/day-use-room" onClick={toggleSidebar}>Day Use Room</Link></li>
               <li><Link href="#" onClick={toggleSidebar}>Events</Link></li>
-              <li><Link href="#" onClick={toggleSidebar}>Hotels</Link></li>
-              <li><Link href="#" onClick={toggleSidebar}>About Us</Link></li>
-              <li><Link href="#" onClick={toggleSidebar}>Blogs</Link></li>
-              <li><Link href="#" onClick={toggleSidebar}>Contact Us</Link></li>
+              <li><Link href="/hotel-room-details" onClick={toggleSidebar}>Hotels</Link></li>
+              <li><Link href="/about" onClick={toggleSidebar}>About Us</Link></li>
+              <li><Link href="/blog" onClick={toggleSidebar}>Blogs</Link></li>
+              <li><Link href="/contact" onClick={toggleSidebar}>Contact Us</Link></li>
             </ul>
           </nav>
         </div>
